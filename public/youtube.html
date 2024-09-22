@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martín & Morales - YouTube</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/cookie-consent.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="video/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <header>
+            <div class="logo-container">
+                <a href="index.html"><img src="images/logo.png" alt="Martín & Morales Logo" id="logo"></a>
+            </div>
+            <div class="lang-switch">
+                <img src="images/spanish_icon_64.png" alt="Español" id="es" onclick="switchLanguage('es')">
+                <img src="images/english_icon_64.png" alt="English" id="en" onclick="switchLanguage('en')">
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-lang="es">Inicio</a><a href="index.html" data-lang="en" class="hidden">Home</a></li>
+                <li><a href="youtube.html" data-lang="es">YouTube</a><a href="youtube.html" data-lang="en" class="hidden">YouTube</a></li>
+                <li><a href="spotify.html" data-lang="es">Spotify</a><a href="spotify.html" data-lang="en" class="hidden">Spotify</a></li>
+                <li><a href="about.html" data-lang="es">Nosotros</a><a href="about.html" data-lang="en" class="hidden">About</a></li>
+                <li><a href="contact.html" data-lang="es">Contacto</a><a href="contact.html" data-lang="en" class="hidden">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h2 data-lang="es">Nuestros Videos en YouTube</h2>
+                <h2 data-lang="en" class="hidden">Our Videos on YouTube</h2>
+                <div id="youtube-video-grid" class="video-grid"></div>
+                <div class="pagination">
+                    <button id="prev-page" disabled>&lt; Anterior</button>
+                    <button id="next-page">Siguiente &gt;</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <div class="social-icons">
+                    <a href="https://on.soundcloud.com/KLQcms5ifpJLrxZw9" target="_blank" class="social-icon"><i class="fas fa-cloud"></i></a>
+                    <a href="https://www.instagram.com/martin.and.morales?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>                
+                </div>    
+                <p class="footer-links">
+                    <a href="cookie-policy.html" data-lang="es">Política de Cookies</a>
+                    <a href="cookie-policy.html" data-lang="en" class="hidden">Cookie Policy</a> | 
+                    <a href="privacy-policy.html" data-lang="es">Política de Privacidad</a>
+                    <a href="privacy-policy.html" data-lang="en" class="hidden">Privacy Policy</a>
+                </p>
+                <p data-lang="es">&copy; 2024 Martín & Morales - Todos los derechos reservados. Web por KNBDev.</p>
+                <p data-lang="en" class="hidden">&copy; 2024 Martín & Morales - All rights reserved. Web by KNBDev.</p>
+            </div>
+        </footer>
+    </div>
+    <div id="cookie-consent-popup" class="cookie-consent">
+        <p data-lang="es">Usamos cookies para mejorar su experiencia en nuestro sitio. <a href="cookie-policy.html" data-lang="es">Leer más</a></p>
+        <p data-lang="en" class="hidden">We use cookies to improve your experience on our site. <a href="cookie-policy.html" data-lang="en" class="hidden">Read more</a></p>
+        <button id="accept-cookies" data-lang="es">Aceptar</button>
+        <button id="accept-cookies" data-lang="en" class="hidden">Accept</button>
+    </div>
+    <!-- Popup de Video -->
+    <div id="video-popup" class="video-popup hidden">
+        <div class="video-popup-content">
+            <span class="video-popup-close">&times;</span>
+            <iframe id="video-frame" width="800" height="600" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

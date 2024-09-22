@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martín & Morales - Nosotros</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/cookie-consent.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="video/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <header>
+            <div class="logo-container">
+                <a href="index.html"><img src="images/logo.png" alt="Martín & Morales Logo" id="logo"></a>
+            </div>
+            <div class="lang-switch">
+                <img src="images/spanish_icon_64.png" alt="Español" id="es" onclick="switchLanguage('es')">
+                <img src="images/english_icon_64.png" alt="English" id="en" onclick="switchLanguage('en')">
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-lang="es">Inicio</a><a href="index.html" data-lang="en"
+                        class="hidden">Home</a></li>
+                <li><a href="youtube.html" data-lang="es">YouTube</a><a href="youtube.html" data-lang="en"
+                        class="hidden">YouTube</a></li>
+                <li><a href="spotify.html" data-lang="es">Spotify</a><a href="spotify.html" data-lang="en"
+                        class="hidden">Spotify</a></li>
+                <li><a href="about.html" data-lang="es">Nosotros</a><a href="about.html" data-lang="en"
+                        class="hidden">About</a></li>
+                <li><a href="contact.html" data-lang="es">Contacto</a><a href="contact.html" data-lang="en"
+                        class="hidden">Contact</a></li>
+            </ul>
+        </nav>
+        <main class="about-main">
+            <!-- Columna izquierda -->
+            <div id="martin_img" class="about-column about-side about-left"></div>
+            <!-- Columna central -->
+            <div class="about-column about-center">
+        
+                <h2 data-lang="es">Sobre Nosotros</h2>
+                <h2 data-lang="en" class="hidden">About Us</h2><br>
+                <div class="card-container">
+                    <div class="card">
+                        <h1>Martin</h1>
+                        <img src="images/martin_profile_img.png" alt="Imagen de Martin">
+                        <div class="card-text">
+                            <h2 data-lang="es">Sergio Martín</h2>
+                            <h2 data-lang="en" class="hidden">Sergio Martin</h2><br>
+                            <p data-lang="es">Sergio Martín es un músico talentoso con una trayectoria impresionante en la industria.
+                                Su pasión por la música lo ha llevado a explorar diversos géneros y estilos. Lorem ipsum
+                                dolor sit amet, consectetur adipiscing elit. Praesent volutpat justo nec magna
+                                efficitur, sit amet aliquam libero sagittis. Integer nec eros nec erat hendrerit
+                                facilisis. Sed in neque eu metus varius scelerisque. Phasellus a dapibus turpis. Mauris
+                                vel nibh ac urna tincidunt pretium. Nam vel fermentum justo. Nunc eget consequat lacus,
+                                nec vehicula ligula.</p>
+                            <p data-lang="en" class="hidden">Sergio Martin is a talented musician with an impressive track record in the industry.
+                                His passion for music has led him to explore various genres and styles. Lorem ipsum
+                                dolor sit amet, consectetur adipiscing elit. Praesent volutpat justo nec magna
+                                efficitur, sit amet aliquam libero sagittis. Integer nec eros nec erat hendrerit
+                                facilisis. Sed in neque eu metus varius scelerisque. Phasellus a dapibus turpis. Mauris
+                                vel nibh ac urna tincidunt pretium. Nam vel fermentum justo. Nunc eget consequat lacus,
+                                nec vehicula ligula.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h1>Morales</h1>
+                        <img src="images/morales_profile_img.png" alt="Imagen de Morales">
+                        <div class="card-text">
+                            <h2 data-lang="es">David Morales</h2>
+                            <h2 data-lang="en" class="hidden">David Morales</h2><br>
+                            <p data-lang="es">David Morales es conocido por su habilidad para conectar con el público a través de sus
+                                letras profundas y emotivas. Su carrera está llena de éxitos y colaboraciones
+                                memorables. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat
+                                justo nec magna efficitur, sit amet aliquam libero sagittis. Integer nec eros nec erat
+                                hendrerit facilisis. Sed in neque eu metus varius scelerisque. Phasellus a dapibus
+                                turpis. Mauris vel nibh ac urna tincidunt pretium. Nam vel fermentum justo. Nunc eget
+                                consequat lacus, nec vehicula ligula.</p>
+                            <p data-lang="en" class="hidden">David Morales is known for his ability to connect with the audience through his
+                                deep and emotional lyrics. His career is full of successes and memorable collaborations. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat justo nec magna efficitur, sit amet aliquam libero sagittis. Integer nec eros nec erat hendrerit facilisis. Sed in neque eu metus varius scelerisque. Phasellus a dapibus turpis. Mauris vel nibh ac urna tincidunt pretium. Nam vel fermentum justo. Nunc eget consequat lacus, nec vehicula ligula.</p>
+                        </div>
+                    </div>
+                </div><br>
+                <p data-lang="es">En la vibrante ciudad de Málaga, dos amigos y productores musicales, Sergio (Martín) y David
+                    (Morales), se destacaban en la escena musical local con sus estilos únicos. Javier, apasionado del
+                    techno oscuro y contundente, y Alejandro, conocido por sus melodías electrónicas llenas de emoción,
+                    decidieron unir sus talentos en un proyecto conjunto.
+                    Inspirados por su amor compartido por la música y su deseo de crear algo nuevo, formaron el grupo
+                    "Martin and Morales". Fusionando la intensidad del techno de Javier con las melodías evocadoras de
+                    Alejandro, lograron un sonido distintivo que rápidamente capturó la atención de la escena techno
+                    melódica. Su colaboración demostró que, a veces, las diferencias pueden dar lugar a algo
+                    extraordinario.</p>
+                <p data-lang="en" class="hidden">In the vibrant city of Málaga, two friends and music producers, Sergio (Martín) and David
+                    (Morales), stood out in the local music scene with their unique styles. Javier, passionate about
+                    dark and forceful techno, and Alejandro, known for his emotionally charged electronic melodies,
+                    decided to join their talents in a joint project.
+                    Inspired by their shared love of music and their desire to create something new, they formed the group
+                    "Martin and Morales". By fusing Javier's intense techno with Alejandro's evocative melodies, they achieved a distinctive sound that quickly captured the attention of the melodic techno scene. Their collaboration proved that sometimes, differences can lead to something extraordinary.</p>
+            </div>
+        
+            <!-- Columna derecha -->
+            <div id="morales_img" class="about-column about-side about-right"></div>
+        </main>
+        
+        <footer class="about-footer">
+            <div class="footer-content">
+                <div class="social-icons">
+                    <a href="https://on.soundcloud.com/KLQcms5ifpJLrxZw9" target="_blank" class="social-icon"><i
+                            class="fas fa-cloud"></i></a>
+                    <a href="https://www.instagram.com/martin.and.morales?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com" target="_blank" class="social-icon"><i
+                            class="fab fa-tiktok"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" class="social-icon"><i
+                            class="fab fa-twitter"></i></a>
+                </div>
+                <p class="footer-links">
+                    <a href="cookie-policy.html" data-lang="es">Política de Cookies</a>
+                    <a href="cookie-policy.html" data-lang="en" class="hidden">Cookie Policy</a> |
+                    <a href="privacy-policy.html" data-lang="es">Política de Privacidad</a>
+                    <a href="privacy-policy.html" data-lang="en" class="hidden">Privacy Policy</a>
+                </p>
+                <p data-lang="es">&copy; 2024 Martín & Morales - Todos los derechos reservados. Web por KNBDev.</p>
+                <p data-lang="en" class="hidden">&copy; 2024 Martín & Morales - All rights reserved. Web by KNBDev.</p>
+            </div>
+        </footer>
+    </div>
+    <div id="cookie-consent-popup" class="cookie-consent">
+        <p data-lang="es">Usamos cookies para mejorar su experiencia en nuestro sitio. <a href="cookie-policy.html"
+                data-lang="es">Leer más</a></p>
+        <p data-lang="en" class="hidden">We use cookies to improve your experience on our site. <a
+                href="cookie-policy.html" data-lang="en" class="hidden">Read more</a></p>
+        <button id="accept-cookies" data-lang="es">Aceptar</button>
+        <button id="accept-cookies" data-lang="en" class="hidden">Accept</button>
+    </div>
+</body>
+
+</html>

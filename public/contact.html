@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martín & Morales - Contacto</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/cookie-consent.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="video/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <header>
+            <div class="logo-container">
+              <a href="index.html"><img src="images/logo.png" alt="Martín & Morales Logo" id="logo"></a>
+            </div>
+            <div class="lang-switch">
+                <img src="images/spanish_icon_64.png" alt="Español" id="es" onclick="switchLanguage('es')">
+                <img src="images/english_icon_64.png" alt="English" id="en" onclick="switchLanguage('en')">
+            </div>
+        </header>
+        <nav>
+          <ul>
+            <li><a href="index.html" data-lang="es">Inicio</a><a href="index.html" data-lang="en" class="hidden">Home</a></li>
+            <li><a href="youtube.html" data-lang="es">YouTube</a><a href="youtube.html" data-lang="en" class="hidden">YouTube</a></li>
+            <li><a href="spotify.html" data-lang="es">Spotify</a><a href="spotify.html" data-lang="en" class="hidden">Spotify</a></li>
+            <li><a href="about.html" data-lang="es">Nosotros</a><a href="about.html" data-lang="en" class="hidden">About</a></li>
+            <li><a href="contact.html" data-lang="es">Contacto</a><a href="contact.html" data-lang="en" class="hidden">Contact</a></li>
+        </ul>
+        </nav>
+        <main>
+            <section class="contact-section">
+                <h2 data-lang="es">Contacto</h2>
+                <h2 data-lang="en" style="display: none;">Contact</h2>
+                <form id="contact-form" method="POST"> <!-- Deja el action vacío para evitar la navegación -->
+                  <div class="form-group">
+                    <label for="name" data-lang="es">Nombre:</label>
+                    <label for="name" data-lang="en" style="display: none;">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" data-lang="es">Email:</label>
+                    <label for="email" data-lang="en" style="display: none;">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="form-group" id="phone-group" style="display: none;">
+                    <label for="phone" data-lang="es">Teléfono:</label>
+                    <label for="phone" data-lang="en" style="display: none;">Phone:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{9}">
+                  </div>
+                  <div class="form-group">
+                    <label for="subject" data-lang="es">Asunto:</label>
+                    <label for="subject" data-lang="en" style="display: none;">Subject:</label>
+                    <select id="subject" name="subject" required>
+                      <option value="contacto" data-lang="es">Contacto</option>
+                      <option value="contacto" data-lang="en" style="display: none;">Contact</option>
+                      <option value="contratacion" data-lang="es">Contratación</option>
+                      <option value="contratacion" data-lang="en" style="display: none;">Hiring</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="message" data-lang="es">Mensaje:</label>
+                    <label for="message" data-lang="en" style="display: none;">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                  </div>
+                  <div class="form-actions">
+                    <button type="submit" id="submit-btn" data-lang="es">Enviar</button>
+                    <button type="button" id="clear-btn" data-lang="es">Limpiar</button>
+                    <button type="submit" id="submit-btn" data-lang="en" style="display: none;">Send</button>
+                    <button type="button" id="clear-btn" data-lang="en" style="display: none;">Clear</button>
+                  </div>
+                </form>
+                
+              </section>
+              
+        </main>
+        <footer>
+            <div class="footer-content">
+              <div class="social-icons">
+                <a href="https://on.soundcloud.com/KLQcms5ifpJLrxZw9" target="_blank" class="social-icon"><i class="fas fa-cloud"></i></a>
+                <a href="https://www.instagram.com/martin.and.morales?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>                
+            </div>    
+                <p class="footer-links">
+                    <a href="cookie-policy.html" data-lang="es">Política de Cookies</a>
+                    <a href="cookie-policy.html" data-lang="en" class="hidden">Cookie Policy</a> | 
+                    <a href="privacy-policy.html" data-lang="es">Política de Privacidad</a>
+                    <a href="privacy-policy.html" data-lang="en" class="hidden">Privacy Policy</a>
+                </p>
+                <p data-lang="es">&copy; 2024 Martín & Morales - Todos los derechos reservados. Web por KNBDev.</p>
+                <p data-lang="en" class="hidden">&copy; 2024 Martín & Morales - All rights reserved. Web by KNBDev.</p>
+            </div>
+        </footer>
+    </div>
+    <div id="cookie-consent-popup" class="cookie-consent">
+        <p data-lang="es">Usamos cookies para mejorar su experiencia en nuestro sitio. <a href="cookie-policy.html" data-lang="es">Leer más</a></p>
+        <p data-lang="en" class="hidden">We use cookies to improve your experience on our site. <a href="cookie-policy.html" data-lang="en" class="hidden">Read more</a></p>
+        <button id="accept-cookies" data-lang="es">Aceptar</button>
+        <button id="accept-cookies" data-lang="en" class="hidden">Accept</button>
+    </div>
+</body>
+</html>
